@@ -9,6 +9,6 @@ export interface UserInterfaceCredential {
   password: string
 }
 
-export interface Itoken {
+export interface IToken {
   token: string
 }
