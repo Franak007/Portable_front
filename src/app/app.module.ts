@@ -17,14 +17,14 @@ import {TokenInterceptor} from "./token.interceptor";
     UserComponent,
     PortableComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
   ],
     imports: [
         BrowserModule,
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        AppRoutingModule
+        AppRoutingModule,
 
     ],
   providers: [TokenInterceptor],

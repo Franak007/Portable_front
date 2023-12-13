@@ -10,6 +10,6 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAllUsers() {
-    return this.http.get<UserInterface[]>('https://127.0.0.1:8000/api/users');
+    return this.http.get<UserInterface[]>('https://127.0.0.1:8001/api/users');
   }
 }

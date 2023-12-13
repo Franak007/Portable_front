@@ -11,18 +11,18 @@ export class PortableService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<PortableInterface[]>{
-    return this.http.get<PortableInterface[]>("https://127.0.0.1:8000/api/names");
+    return this.http.get<PortableInterface[]>("https://127.0.0.1:8001/api/names");
       }
 
   addPortable(portable: PortableInterface){
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const body = JSON.stringify(portable);
     console.log(portable);
-    return this.http.post<PortableInterface>('https://127.0.0.1:8000/api/names', body,
+    return this.http.post<PortableInterface>('https://127.0.0.1:8001/api/names', body,
       {'headers' : headers});
   }
 
   deletePortable(id:number){
-    return this.http.delete<PortableInterface>('https://127.0.0.1:8000/api/names/'+id);
+    return this.http.delete<PortableInterface>('https://127.0.0.1:8001/api/names/'+id);
   }
 }
